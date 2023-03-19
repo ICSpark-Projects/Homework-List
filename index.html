@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework Checklist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>Homework Checklist</h1>
+  <p>After task completion, click on the 'x' to delete it.</p>
+</div>
+
+<div class="container">
+  <ul id="myUL">
+    <li>Take notes on Industrial Revolution chapter</li>
+    <li>Organize notes</li>
+    <li>Study for quiz</li>
+    <li>Read Catcher in the Rye: Chapter 3</li>
+    <li>Construct biome diorama</li>
+    <li>Finish nature sketch</li>
+    <li>Finish algebra problems</li>
+  </ul>
+
+  <div class="input">
+    <input type="text" id="myInput" placeholder="New Item...">
+    <span onclick="newElement()" class="addBtn">Add</span>
+  </div>
+</div>
+
+<button type="button" id="clear-list" onclick="removeAll()">Clear Items</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
