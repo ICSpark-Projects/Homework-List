@@ -66,17 +66,13 @@ Inside the for-loop:
      
     2. Set the style.display attribute of the div variable to "none"
           * ex: variable.style.display = "none"
-     
-     
+      
     3. Close your function!
      
 4. Set the array element at index i to the function, when clicked.
     * ex: close[i].onclick = functionName()
 
-
-
-Your completed Part 2 should look like this:
-
+Your completed Part 3 should look like this:
 ```JavaScript
 var close = document.getElementsByClassName("close");
 
@@ -136,6 +132,34 @@ Inside the function:
 
 15. Close your function!
 
+Your completed Part 5 should look like this:
+```JavaScript
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var newText = document.createTextNode(inputValue);
+  li.appendChild(newText);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+```
+
 ## Part 6: Create the removeAll() function to add functionality to the “Clear Items” button
 
 1. Create a function called 'removeAll' that takes no parameters.
@@ -146,4 +170,6 @@ Inside the function:
 
 4. Set the list[0].innerHTML to an empty string ""
 
-
+## Stretch Goals
+* Use DOM to change the style/color of the items  
+* Use DOM to append text onto the end of the item element to specify an estimated time that the assignment may take
