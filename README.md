@@ -20,9 +20,10 @@ To complete this project, students should have the following:
 
 ## Part 1
 
-Create the following:
+Upload the provided files:
 * HTML file
 * CSS file
+Create the following:
 * JS file
 
 Link all of your files correctly.
