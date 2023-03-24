@@ -18,11 +18,12 @@ To complete this project, students should have the following:
 * Basic understanding of CSS properties.
 * Basic understanding of JavaScript and DOM.
 
-## Part 1
+## Part 1: Set Up
 
 Upload the provided files:
 * HTML file
 * CSS file
+
 Create the following:
 * JS file
 
@@ -30,51 +31,40 @@ Link all of your files correctly.
 
 ## Part 2: Create a "close" button and append it to each list item
 
-1. Create an array that gets all the elements with tag name "li"
+#### In the JavaScript file:
+1. Create an array that gets all the elements with tag name "li". Create a variable named myNodeList to hold this array
 
-2. Create a for-loop that iterates from var i = 0 to the length of the array
+2. Create a for-loop that iterates from var i = 0 to the length of the array. The for-loop should look like this:
+
+```javascript
+for (var i = 0; i < myNodeList.length; i++) {
+  //insert code inside the for-loop here
+}
+```
 
 Inside the for-loop:
 
 3. Create a variable called 'span' and store in it a new element with the tag name "span"
-   * ex: var span = document.createElement("span");
+   * ex: var foo = document.createElement("tagName");
  
 4. Create a variable called 'txt' and store in it a new text node of the unicode for the multiplication sign, which looks like "x". The unicode for the multiplication sign is "\u00D7"
+   * ex: var bar = document.createTextNode("\u00D7");
 
 5. Set the class name of the span variable equal to "close"
 
 6. Append the txt variable as the child node to span
-    *	 ex: span.appendChild(txt)
+    *	 ex: span.appendChild(var)
     
-7. Append the span variable as the child node to the array element at index i
-    *  ex: arr[i].appendChild(span)
+7. Append the span variable as the child node to the array myNodeList at index i
+    *  ex: arr[i].appendChild(var)
 
 ## Part 3: Add “close” button functionality
 
 1. Create an array called 'close' that gets all the elements with class name "close"
-    * ex: var close = document.getElementsByClassName("close")
    
-2. Create a for-loop that iterates from var i = 0 to the length of the close array
+2. Next, copy and paste this code to stop displaying the list item when the close button is clicked. This code uses a for-loop to iterate through each element in the close array. Inside of the for-loop, we use a function to access the parent element of the current item when clicked, and set that element's style.display to "none". 
 
-Inside the for-loop:
-
-3. Create a function that takes no parameters.
-
-    Inside the function:
- 
-    1. Create a variable called 'div' and set it to "this.parentElement"
-     
-    2. Set the style.display attribute of the div variable to "none"
-          * ex: variable.style.display = "none"
-      
-    3. Close your function!
-     
-4. Set the array element at index i to the function, when clicked.
-    * ex: close[i].onclick = functionName()
-
-Your completed Part 3 should look like this:
 ```JavaScript
-var close = document.getElementsByClassName("close");
 
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
@@ -84,8 +74,9 @@ for (i = 0; i < close.length; i++) {
 }
 ```
 
-## Part 4: Copy and paste this code to check off the list item when clicked
+## Part 4: Check off the list item when item is clicked
 
+1. Copy and paste this code to check off the list item when clicked. This code uses an event listener to check if the item clicked has the tagName 'li' and toggles the item to display a checkmark if true. 
 ```javascript
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
