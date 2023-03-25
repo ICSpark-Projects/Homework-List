@@ -118,37 +118,19 @@ Inside the function:
 12. Append the span variable as the child node to the li variable
     * ex: li.appendChild(span)
 
-13. Create the same for-loop from Part 3 using Lines 2-4.
+13. Next, create the same for-loop from Part 3. Copy and paste this code to stop displaying the list item when the close button is clicked.
 
-14. Close your function!
-
-Your completed Part 5 should look like this:
 ```JavaScript
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var newText = document.createTextNode(inputValue);
-  li.appendChild(newText);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
   }
 }
 ```
+
+14. Close your function!
 
 ## Part 6: Create the removeAll() function to add functionality to the “Clear Items” button
 
@@ -156,9 +138,9 @@ function newElement() {
 
 Inside the function:
 
-2. Create an array called 'list' and store in it all the elements with the tag name "ul"
+2. Change to Get all the elements with the tag name "ul" and store this in a variable named 'list'
 
-4. Set the list[0].innerHTML to an empty string ""
+4. Set the innerHTML of the first element of list to ""
 
 ## Stretch Goals
 * Use DOM to change the style/color of the items  
