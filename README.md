@@ -52,10 +52,10 @@ Inside the for-loop:
 
 5. Set the className attribute of the span variable equal to "close"
 
-6. Append the txt variable as the child node to span
+6. Append the txt variable as the child to span
     *	 ex: span.appendChild(var)
     
-7. Append the span variable as the child node to the array myNodeList at index i
+7. Append the span variable as the child to the array myNodeList at index i
     *  ex: arr[i].appendChild(var)
 
 ## Part 3: Add “close” button functionality
@@ -112,10 +112,10 @@ Inside the function:
  
 10. Set the className attribute of the span variable equal to "close"
 
-11. Append the txt variable as the child node to span
+11. Append the txt variable as the child to span
     * ex: span.appendChild(txt)
   
-12. Append the span variable as the child node to the li variable
+12. Append the span variable as the child to the li variable
     * ex: li.appendChild(span)
 
 13. Next, create the same for-loop from Part 3. Copy and paste this code to stop displaying the list item when the close button is clicked.
