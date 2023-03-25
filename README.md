@@ -142,6 +142,8 @@ Inside the function:
 
 4. Set the innerHTML of the first element of list to ""
 
+#### Now you have a functioning homework checklist! Remove the example assignments and add your own real homework assignments to personalize and make use of your checklist.
+
 ## Stretch Goals
 * Use DOM to change the style/color of the items  
 * Use DOM to append text onto the end of the item element to specify an estimated time that the assignment may take
