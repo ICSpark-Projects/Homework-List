@@ -50,7 +50,7 @@ Inside the for-loop:
 4. Create a variable called 'txt' and store in it a new text node of the unicode for the multiplication sign, which looks like "x". The unicode for the multiplication sign is "\u00D7"
    * ex: var bar = document.createTextNode("\u00D7");
 
-5. Set the class name of the span variable equal to "close"
+5. Set the className attribute of the span variable equal to "close"
 
 6. Append the txt variable as the child node to span
     *	 ex: span.appendChild(var)
@@ -88,40 +88,39 @@ ev.target.classList.toggle('checked');
 
 ## Part 5: Create a new list item when “add” button is clicked
 
-1. Create another function that takes no parameters.
+1. Create another function named newElement that takes no arguments.
 
 Inside the function:
 
 2. Create a variable called 'li' that creates an element with the tag name "li"
 
-4. Create a variable called 'inputValue' that gets the value of the element with the ID "myInput"
+3. Create a variable called 'inputValue' that gets the value of the element with the ID "myInput"
 
-6. Create a variable called 'newText' that creates a text node containing the inputValue variable
+4. Create a variable called 'newText' that creates a text node containing the inputValue variable
+   * ex: var foo = document.createTextNode(inputValue);
 
-8. Append the newText variable as the child to the li variable
-
-    
-6. To check if the input value is valid, create an if-else statement, which checks if the input value is blank
-    1. if the inputValue === '', then write an alert telling the user they must type something.
-    2. Else, then input is considered valid. Append the li variable as the child to the element with ID "myUL"
-
-7. Set the value of the element with ID="myInput" to ""
-
-9. Create a variable called 'span' and store in it the new element of the tag name "span"
-
-11. Create a variable called 'txt' and store in it a new text node of the unicode for the multiplication sign, which looks like "x". The unicode for the multiplication sign is "\u00D7"
+5. Append the newText variable as the child to the li variable
+   * ex: li.appendChild(var)
  
-13. Set the class name of the span variable equal to "close"
+6. If the inputValue is empty, then write an alert telling the user they must type something. Use alert(). Else, input is valid. Get the element with the ID myUL. Then append the li variable to this element
 
-15. Append the txt variable as the child node to span
+7. Get the element with the ID myInput and set its value to ""
+
+8. Create an element with the tag "span" and store it in a variable named 'span'
+
+9. Create an element with the tag "\u00D7" and store it in a variable named 'txt'
+ 
+10. Set the className attribute of the span variable equal to "close"
+
+11. Append the txt variable as the child node to span
     * ex: span.appendChild(txt)
   
-16. Append the span variable as the child node to the li variable
+12. Append the span variable as the child node to the li variable
     * ex: li.appendChild(span)
 
 13. Create the same for-loop from Part 3 using Lines 2-4.
 
-15. Close your function!
+14. Close your function!
 
 Your completed Part 5 should look like this:
 ```JavaScript
